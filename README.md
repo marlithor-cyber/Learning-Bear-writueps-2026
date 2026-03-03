@@ -14,6 +14,7 @@ I'm top 3 in CTF QUAL.
 ## Pwn
 
 - [chall1](pwn/chall1/README.md)
+- [chall2](pwn/chall2/README.md)
 
 ## Web
 
