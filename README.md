@@ -14,3 +14,4 @@ I'm top 3 in CTF QUAL.
 ## Web
 
 - [chall1](web/chall1/README.md)
+- [chall2](web/chall2/README.md)
