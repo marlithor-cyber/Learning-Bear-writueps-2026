@@ -11,6 +11,10 @@ I'm top 3 in CTF QUAL.
 - [chall3](reverse/chall3/README.md)
 - [chall4](reverse/chall4/README.md)
 
+## Pwn
+
+- [chall1](pwn/chall1/README.md)
+
 ## Web
 
 - [chall1](web/chall1/README.md)
