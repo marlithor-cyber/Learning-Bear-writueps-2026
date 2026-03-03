@@ -6,7 +6,7 @@ Challenge name: `Chess`
 
 ## Summary
 
-The challenge exposes a websocket chess server and tells you to beat Stockfish.
+The challenge exposes a websocket chess server and asks you to beat Stockfish.
 
 Relevant files:
 
@@ -30,7 +30,7 @@ That is the bug path.
 
 The websocket backend accepts several white moves in a row before the black Stockfish side responds.
 
-So instead of playing a real game, you can queue a whole mating line immediately after the connection starts. The server processes the queued white moves on the same board state progression, and black never gets its turn between them.
+So instead of playing a real game, you can queue a whole mating line immediately after the connection starts. The server processes the queued white moves one after another, and black never gets a turn between them.
 
 ## Exploit
 
@@ -48,7 +48,7 @@ Each argument becomes:
 
 and `solve.py` transmits them without waiting for replies.
 
-The important point is not the specific opening theory, but the race/turn-desync:
+The important part is not the opening itself, but the turn desync:
 
 1. White sends multiple legal moves in one burst.
 2. The server accepts them sequentially.
@@ -57,6 +57,6 @@ The important point is not the specific opening theory, but the race/turn-desync
 
 ## Notes
 
-- The public LB API still showed the challenge metadata on March 3, 2026, confirming the title `Chess` and the description `Beat Stockfish. You have no time limit.`
-- The live chess backend at `51.250.116.20:4832` was timing out during this pass, so I could not re-fetch and re-verify the final flag from the remote service.
-- The exploit itself is directly supported by the provided `solve.py`, which was clearly adapted for queued move submission rather than ordinary play.
+- The title on the LB site was `Chess`, with the description `Beat Stockfish. You have no time limit.`
+- The exploit is directly reflected in the provided `solve.py`: the whole point of `--burst` is to send queued move messages before the server lets black respond.
+- Since the instance is closed now, this writeup focuses on the bug and the winning move sequence rather than replaying the remote interaction.
