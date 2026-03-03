@@ -15,3 +15,4 @@ I'm top 3 in CTF QUAL.
 
 - [chall1](web/chall1/README.md)
 - [chall2](web/chall2/README.md)
+- [chall3](web/chall3/README.md)
