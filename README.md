@@ -9,3 +9,4 @@ I'm top 3 in CTF QUAL.
 - [chall1](reverse/chall1/README.md)
 - [chall2](reverse/chall2/README.md)
 - [chall3](reverse/chall3/README.md)
+- [chall4](reverse/chall4/README.md)
