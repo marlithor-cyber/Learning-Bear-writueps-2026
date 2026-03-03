@@ -7,3 +7,4 @@ I'm top 3 in CTF QUAL.
 ## Reverse
 
 - [chall1](reverse/chall1/README.md)
+- [chall2](reverse/chall2/README.md)
